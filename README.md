@@ -25,7 +25,8 @@ narrow slice that really is math-shared skeleton across both:
   4x4 zig-zag scan order used by H.264 (and structurally similar to
   classic JPEG zigzag patterns). Other codec-specific scan orders (e.g. AV1's
   various scan tables) do not belong here.
-- `codec-primitives.motion` — a codec-agnostic `MotionVector` malli shape
+- `codec-primitives.motion` — a codec-agnostic `MotionVector` shape
+  (`kotoba-lang/spec` data, malli until 2026-09-10)
   (POC, ref index, `[dx dy]` quarter-pel motion vector, ref-frame key) for
   representing motion vectors and reference-frame pointers as data, without
   committing to how any particular codec resolves `:ref-frame` into pixels.
