@@ -4,7 +4,13 @@
         ;; tools.deps takes the NEWEST sha it is shown, so without a floor here
         ;; this repo silently rides whatever a sibling happens to name.
         io.github.kotoba-lang/text {:git/sha "73bdb13ae7a3d004b44bca08be03a3191157a38f"}
-       metosin/malli {:mvn/version "0.16.4"}}
+        ;; kotoba-lang/spec, not malli: this repository's last third-party JVM
+        ;; dependency was carried for one `validate` call in an eleven-line
+        ;; namespace, and a Maven jar cannot reach the kotoba-WASM host these
+        ;; `.cljc` sources claim to run on.
+        io.github.kotoba-lang/spec
+        {:git/url "https://github.com/kotoba-lang/spec.git"
+         :git/sha "ffaa34e69834fe83dabf4c04077339a791585fa2"}}
  :aliases
  {:test {:extra-paths ["test"]
         :extra-deps {io.github.cognitect-labs/test-runner
@@ -12,7 +18,7 @@
                      ;; TEST-ONLY. The Kotoba compiler and the KIR
                      ;; interpreter drive the `motion.kotoba` port through
                      ;; `motion-parity-test`, which checks it against the
-                     ;; malli-based reference in `codec-primitives.motion`.
+                     ;; spec-based reference in `codec-primitives.motion`.
                      ;; Neither is linked into anything this repo ships.
                      io.github.kotoba-lang/kotoba-kir
                      {:git/url "https://github.com/kotoba-lang/kotoba-kir.git"
