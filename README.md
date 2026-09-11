@@ -47,11 +47,11 @@ design rationale behind splitting out this shared skeleton.
 ## Test
 
 ```sh
-clojure -M:test
+kbb -M:test
 ```
 
 ## Lint
 
 ```sh
-clojure -M:lint
+kbb -M:lint
 ```
