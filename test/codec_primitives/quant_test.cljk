@@ -1,5 +1,5 @@
 (ns codec-primitives.quant-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [codec-primitives.quant :as q]))
 
 ;; Dummy implementation: scale grows monotonically with QP (portable
