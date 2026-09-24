@@ -1,5 +1,5 @@
 (ns codec-primitives.transform-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [codec-primitives.transform :as t]))
 
 (deftype IdentityTransform []

@@ -1,5 +1,5 @@
 (ns codec-primitives.motion-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [codec-primitives.motion :as motion]))
 
 (deftest valid-mv-test
