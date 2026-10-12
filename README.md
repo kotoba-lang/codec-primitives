@@ -16,7 +16,7 @@ narrow slice that really is math-shared skeleton across both:
 - `codec-primitives.transform` — a `BlockTransform` protocol (`forward`/
   `inverse`) that defines *how* a codec-specific transform is called, without
   specifying *what* the transform does. Coefficient tables live in codec repos
-  (e.g. `h264.transform`, a future `av1.transform`), not here.
+  (e.g. `h264.transform`, `av1.transform`), not here.
 - `codec-primitives.quant` — a `QuantScale` protocol (`qp->scale`) for the
   general shape of "QP in, scale out." The actual QP→scale tables are codec
   specific and stay in codec repos.
@@ -35,8 +35,8 @@ narrow slice that really is math-shared skeleton across both:
 (CABAC/CAVLC/range coding), in-loop / deblocking / restoration filters,
 concrete transform coefficient tables, and film grain synthesis.
 
-Consumers: `kotoba-lang/org-iso-h264` (H.264) depends on this repo; a future
-`kotoba-lang/org-aomedia-av1` (AV1) is expected to as well.
+Consumers: `kotoba-lang/org-iso-h264` (H.264) depends on this repo;
+`kotoba-lang/org-aomedia-av1` (AV1) does as well.
 
 ## Related ADR
 
